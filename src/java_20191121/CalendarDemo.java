@@ -9,10 +9,9 @@ public class CalendarDemo {
 		 3. 윤년은 4년마다 반복 그 중 100의 배수는 제외, 400의 배수는 다시 더한다(제외X)
 		 4. 2019년 12월 25일은 무슨 요일일까요?
 		 */
-		
-		int year = 2016;
-		int month = 5;
-		int day = 18;
+		int year = 2019;
+		int month = 12;
+		int day = 25;
 		
 		int[] monthArray = {31,28,31,30,31,30,31,31,30,31,30,31};
 		
@@ -22,16 +21,15 @@ public class CalendarDemo {
 				temp++;	
 			}
 		}
-		int sum = 0;
 		if((year % 4 == 0) && (year % 100 != 0 || year % 400 == 0)){
 			monthArray[1] = 29;	
 		}
+		int sum = 0;
 		int[] some = new int[month-1];
 			System.arraycopy(monthArray, 0, some, 0, month-1);
 		for (int j = 0; j < some.length; j++) {
 			sum += some[j];	
 		}
-		
 		sum += day;
 		temp += sum;
 		

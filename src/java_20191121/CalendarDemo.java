@@ -44,9 +44,5 @@ public class CalendarDemo {
 		case 6 : message = "토요일"; break;
 		}
 		System.out.printf("%d년 %d월 %d일은 %s 입니다.", year, month , day , message );
-		
-		
-		//연도 입력 시 달력만들기
-		
 	}
 }

@@ -30,15 +30,15 @@ public class Homework2 {
 		//prime number(소수) 구하기 , 1~100까지
 		for (int i = 2; i <= 100; i++) {
 			int num = 0; 
-			for (int j = 2; j <= i; j++) { //int j = 2; j < i; j++
-				if(i%j == 0 && i!=j){	//i%j == 0
-					//num++
+			for (int j = 2; j <= i; j++) { //(int j = 2; j < i; j++)
+				if(i%j == 0 && i!=j){	//(i%j == 0)
+					//num++;
 					break; //1과 자기 자신외에 다른 약수 발생시 바로 빠져나오도록 함
 				//else if가 필요없다
 				}else if(i%j == 0 && i ==j){ 
 					num+=1;
 				}
-				if(num == 1){ //num == 0
+				if(num == 1){ //(num == 0)
 					System.out.print(i + " ");
 				}
 			}	

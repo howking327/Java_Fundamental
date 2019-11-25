@@ -12,10 +12,9 @@ public class Homework2 {
 				ch[i] = ch[ch.length-1-i];
 				ch[ch.length-1-i] = ap;
 			}
-			for (char rch : ch) {
-				System.out.print(rch);
-			}
+			System.out.println(new String(ch));
 			System.out.println();
+			
 			
 			//2. input "abcde => "edcba"
 		input = "abcde"; 
@@ -25,24 +24,24 @@ public class Homework2 {
 				chs[i] = chs[chs.length-1-i];
 				chs[chs.length-1-i] = aps;
 			}
-			for (char rchs : chs) {
-				System.out.print(rchs);
-			}
+			System.out.println(new String(chs));
 			System.out.println();
 	
 		//prime number(소수) 구하기 , 1~100까지
 		for (int i = 2; i <= 100; i++) {
 			int num = 0; 
-			for (int j = 2; j <= i; j++) {
-				if(i%j == 0 && i!=j){
+			for (int j = 2; j <= i; j++) { //int j = 2; j < i; j++
+				if(i%j == 0 && i!=j){	//i%j == 0
+					//num++
 					break; //1과 자기 자신외에 다른 약수 발생시 바로 빠져나오도록 함
-				}else if(i%j == 0 && i ==j){
+				//else if가 필요없다
+				}else if(i%j == 0 && i ==j){ 
 					num+=1;
 				}
-				if(num == 1){
+				if(num == 1){ //num == 0
 					System.out.print(i + " ");
 				}
-			}
+			}	
 		}
 	}
 }

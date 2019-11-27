@@ -2,16 +2,14 @@ package java_20191126.step6;
 
 public class StopNanoWatch extends StopWatch{
 	private void start(){
-		StopWatch s = new StopMicroWatch();
-		s.setStartTime(System.nanoTime());
+		setStartTime(System.nanoTime());
 	}
 	private void stop(){
-		StopWatch s = new StopMicroWatch();
-		s.setEndTime(System.nanoTime());
+		setEndTime(System.nanoTime());
 	}
 	private double getElapsedTime(){
-		StopWatch s = new StopMicroWatch();
-		return (double)(s.getEndTime()-s.getStartTime())/1000000000;
+		
+		return (double)(getEndTime()-getStartTime())/1000000000;
 	}
 	public void run(){
 		start();

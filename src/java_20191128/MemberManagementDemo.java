@@ -3,7 +3,7 @@ package java_20191128;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class MemberManagementDemo {
+public class MemberManagementDemo{
 	private ArrayList<Member> list;
 	
 	public MemberManagementDemo(){
@@ -51,20 +51,33 @@ public class MemberManagementDemo {
 		list.add(m);
 		
 		System.out.println("정상적으로 등록되었습니다.");
+		System.out.printf("총 등록된 회원은 %d 명 입니다.%n",list.size());
 		
 		print();
 		String index = console("번호를 선택하세요>");
 		run(index);
 	}
 	//1. 수정할 아이디를 입력받는다.
-	//2. ArrayList에 있는 멤버 중에서 수정할 아이디를 찾아서 존재하면 수정하게 함(이름도 마찬가지)
-	//3. 없으면 수정할 아이디가 없습니다. 등의 메시지를 출력한다.
-	//4. ArrayList에 있는 멤버정보를 모두 출력한다.
-	//5. print() 메서드를 호출하여 선택할 수 있게한다.
-	//6. 번호를 선택하세요> 메세지를 출력한 후 키보드 입력을 받게 대기 한다.
-	//7. 번호를 입력 받으면 run()메서드를 호출한다.
+	//2. ArrayList에 있는 멤버중에서 수정할 아이디를 찾아서 있으면 수정할
+	//   이름을 입력받고, ArrayList에 멤버정보를 수정하고 만약 없으면 
+	//   수정할 아이디가 없습니다. 라는 메세지를 출력한다.
+	//3. ArrayList에 있는 멤버정보를 모두 출력한다.
+	//4. print() 메서드를 호출하여 번호를 선택할 수 있게한다.
+	//5. 번호를 선택하세요> 메세지를 출력한 후 키보드 입력을 받게 대기 한다.
+	//6. 번호를 입력받으면 run()메서드를 호출한다.
 	public void update(){
+		String id = console("기존 아이디>");
 		
+		
+		//Member m = new Member(id,name);
+		
+		
+		System.out.println("정상적으로 등록되었습니다.");
+		System.out.printf("총 등록된 회원은 %d 명 입니다.%n",list.size());
+		
+		print();
+		String index = console("번호를 선택하세요>");
+		run(index);
 	}
 	//1. 삭제할 아이디를 입력받는다.
 	//2. ArrayList에 있는 멤버 중에서 삭제할 아이디를 찾아서 존재하면 삭제하게 함

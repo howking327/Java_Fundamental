@@ -1,5 +1,5 @@
 package java_20191127.step4;
-
+//1. 실제 비지니스 로직을 메서드로 분리하자
 public class StopWatchDemo {
 	public void execute(MilliWatch s){
 		s.start();

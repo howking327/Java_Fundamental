@@ -67,14 +67,22 @@ public class MemberManagementDemo{
 	//6. 번호를 입력받으면 run()메서드를 호출한다.
 	public void update(){
 		String id = console("기존 아이디>");
-		
-		
-		//Member m = new Member(id,name);
-		
-		
-		System.out.println("정상적으로 등록되었습니다.");
-		System.out.printf("총 등록된 회원은 %d 명 입니다.%n",list.size());
-		
+		boolean bl = false;
+		for (int i = 0; i < list.size(); i++) {
+			if(id.equals(list.get(i).getId())){
+				String name = console("기존 이름>");
+				list.get(i).setId(console("수정할 아이디>"));
+				list.get(i).setName(console("수정할 이름>"));
+				bl = true;
+				break;
+			}
+		}
+		if(bl==false){
+			System.out.println("수정할 아이디가 없습니다.");
+		}
+		for(Member m : list){
+			System.out.println(m);
+		}
 		print();
 		String index = console("번호를 선택하세요>");
 		run(index);
@@ -87,18 +95,50 @@ public class MemberManagementDemo{
 	//6. 번호를 선택하세요> 메세지를 출력한 후 키보드 입력을 받게 대기 한다.
 	//7. 번호를 입력 받으면 run()메서드를 호출한다.
 	public void delete(){
-			
+		String id = console("삭제할 아이디>");
+		boolean bl = false;
+		for (int i = 0; i < list.size(); i++) {
+			if(id.equals(list.get(i).getId())){
+				String name = console("본인 확인 이름>");
+				list.remove(i);
+				bl = true;
+				break;
+			}
+		}
+		if(bl==false){
+			System.out.println("삭제 가능한 아이디가 없습니다.");
+		}
+		for(Member m : list){
+			System.out.println(m);
+		}
+		System.out.println("정상적으로 제거되었습니다.");
+		print();
+		String index = console("번호를 선택하세요>");
+		run(index);
 	}
 	//1. 검색할 아이디를 입력받는다.
-	//2. ArrayList에 있는 멤버 중에서 검색할 아이디를 찾아서 존재하면 삭제하게 함
-	//3. 없으면 검색된 결과가 없습니다. 등의 메시지를 출력한다.
-	//4. print() 메서드를 호출하여 선택할 수 있게한다.
-	//5. 번호를 선택하세요> 메세지를 출력한 후 키보드 입력을 받게 대기 한다.
-	//6. 번호를 입력 받으면 run()메서드를 호출한다.
+	//2. ArrayList에 있는 멤버중에서 검색할 아이디를 찾아서 있으면 출력하고
+	//   없으면 "검색된 결과가 없습니다." 라는 메세지를 출력한다.
+	//3. print() 메서드를 호출하여 번호를 선택할 수 있게한다.
+	//4. 번호를 선택하세요> 메세지를 출력한 후 키보드 입력을 받게 대기 한다.
+	//5. 번호를 입력받으면 run()메서드를 호출한다.
 	public void search(){
-		
+		String id = console("검색할 아이디>");
+		boolean bl = false;
+		for (int i = 0; i < list.size(); i++) {
+			if(id.equals(list.get(i).getId())){
+				System.out.printf("검색된 아이디 : %s%n", id);
+				bl = true;
+				break;
+			}
+		}
+		if(bl==false){
+			System.out.println("검색된 아이디가 없습니다.");
+		}
+		print();
+		String index = console("번호를 선택하세요>");
+		run(index);
 	}
-	
 	
 	public static void main(String[] args) {
 		MemberManagementDemo m1 = new MemberManagementDemo();

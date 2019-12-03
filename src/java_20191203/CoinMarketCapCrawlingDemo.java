@@ -24,7 +24,7 @@ public class CoinMarketCapCrawlingDemo {
 		Elements elements = doc.select(".cmc-table__table-wrapper-outer table tbody tr");
 		System.out.println("Date\t\tOpen\tHigh\tLow\tClose\tVolume\tM.cap");
 		
-		//c:\dev\io\2019\12\crawling.txt -> 저장하기
+		//c:\dev\io\2019\12\crawling.txt => 저장하기
 		FileWriter fw = null;
 		BufferedWriter bw = null;
 		PrintWriter pw = null;

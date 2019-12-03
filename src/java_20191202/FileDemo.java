@@ -18,10 +18,10 @@ public class FileDemo {
 		
 		Calendar c = Calendar.getInstance();
 		c.setTimeInMillis(lastModified);
+		
 		int year = c.get(Calendar.YEAR);
 		int month = c.get(Calendar.MONTH)+1;
 		int day = c.get(Calendar.DATE);
-		
 		System.out.printf("%d년 %d월 %d일 %n",year, month, day);
 		
 		

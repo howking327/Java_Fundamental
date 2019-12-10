@@ -6,7 +6,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
-
+//자주 쓰는 코드를 클래스로 저장 후 추후에 상속으로 불러낼 수 있다
 public class Utility {
 	public static boolean isCopy(String fromFile, String toFile){
 		FileInputStream fis = null;

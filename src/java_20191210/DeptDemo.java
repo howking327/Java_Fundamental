@@ -8,6 +8,7 @@ import java_20191210.dto.DeptDto;
 public class DeptDemo {
 	public static void main(String[] args) {
 		DeptDao d = DeptDao.getInstance();
+		
 		//boolean isSuccess = d.insert(new DeptDto(50,"DEVELOPERS","TEXAS"));
 		//System.out.println(isSuccess);
 		
@@ -16,6 +17,7 @@ public class DeptDemo {
 		
 		//boolean isSuccess = d.delete(50);
 		//System.out.println(isSuccess);
+		
 		
 		ArrayList<DeptDto> list = d.select();
 		for(DeptDto dto : list){

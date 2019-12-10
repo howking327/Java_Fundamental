@@ -21,8 +21,7 @@ public class DeptDao {
 	// 1. singleton pattern
 	private static DeptDao single;
 
-	private DeptDao() {
-	}
+	private DeptDao() {}
 
 	public static DeptDao getInstance() {
 		if (single == null) {

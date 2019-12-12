@@ -26,7 +26,7 @@ public class WrapperDemo {
 		Integer i2 = list.get(1);
 		
 		int a = i1 + i2; //auto-unboxing
-		
+		System.out.println(a);
 		// String str = 10; 하면 생성안됨 String str = 10 + ""; 로도 가능하나 '저급'한 방법이다
 		String str = String.valueOf(10);
 		

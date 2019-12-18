@@ -9,7 +9,7 @@ public class DeptDemo {
 	public static void main(String[] args) {
 		DeptDao d = DeptDao.getInstance();
 		
-		//boolean isSuccess = d.insert(new DeptDto(50,"DEVELOPERS","TEXAS"));
+		//boolean isSuccess = d.insert(new DeptDto(10,"DEVELOPERS","TEXAS"));
 		//System.out.println(isSuccess);
 		
 		//boolean isSuccess = d.update(new DeptDto(50,"DEVELOPERS","LA"));
